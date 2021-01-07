@@ -1,32 +1,15 @@
 body {
     text-align: center;
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: lightgray;
+    color: #100c08;
     margin: 0;
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-body);
+    font-family: "ubuntu";
+    font-size: 1rem;
     line-height: 1.6;
+    padding: 1em;
 }
 
-:root {
-    --ff-primary: 'Chakra', serif;
-    --ff-secondary: 'Ubuntu', serif;
-    
-    --fw-reg: 400;
-    --fw-bold: 700;
-    
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #f8333c;
-    
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-    
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
-}
+
 
 @media (min-width: 800px) {
     :root {
@@ -35,4 +18,42 @@ body {
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
+}
+
+
+
+
+.header-container {
+    display: grid;
+    grid-column-gap: 5px;
+    
+}
+
+img {
+    display: block;
+    max-width: 20%;
+    
+}
+.itemA {
+    grid-area: main;
+  }
+  .itemB {
+    grid-area: second;
+  }
+  .itemC {
+    grid-area: item;
+  }.itemD {
+    grid-area: item;
+  }.itemE {
+    grid-area: item;
+  }
+
+.about-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "main main main"
+  "second second second"
+  "item item item";
 }
