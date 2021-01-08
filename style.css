@@ -10,35 +10,37 @@ body {
 }
 
 
-
-@media (min-width: 800px) {
-    :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
-    }
-}
-
-
-
-
 .header-container {
     display: grid;
-    grid-column-gap: 5px;
+    grid-column-gap: 1px;
+    grid-template-areas: 
+            "img title"
+            "img subtitle";
+    border: solid 2px black;
+    justify-content: space-between;
+    padding: 1em 30em;
+    
     
 }
 
 img {
     display: block;
-    max-width: 20%;
+    max-width: 200px;
+    grid-area: img;
+    border: solid 2px black;
     
 }
+.title {
+  grid-area: title;
+  border: solid 2px black;
+}
+.subtitle{
+  grid-area: subtitle;
+  border: solid 2px black;
+}
+
 .itemA {
     grid-area: main;
-  }
-  .itemB {
-    grid-area: second;
   }
   .itemC {
     grid-area: item;
@@ -49,11 +51,35 @@ img {
   }
 
 .about-container{
+  border: solid 2px black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  padding: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 100px));
+  grid-auto-rows: 100px;
+  
+  
+  
+  
+  
   grid-template-areas: 
   "main main main"
-  "second second second"
   "item item item";
+}
+
+.works-container{
+  border: solid 2px black;
+  display: flex;
+  align-content: center;
+  padding: 1em;
+}
+
+.contacts-container{
+  border: solid 2px black;
+  padding: 1em;
+}
+
+.contact-links{
+  border: solid 2px black;
+  padding: 1em;
+  margin-top: 1em;
 }
