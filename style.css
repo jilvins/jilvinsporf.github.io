@@ -1,9 +1,9 @@
 body {
     text-align: center;
-    background: lightgray;
-    color: #100c08;
+    background: #984063;  
+    color: whitesmoke;
     margin: 0;
-    font-family: "ubuntu";
+    font-family: 'Ubuntu';
     font-size: 1rem;
     line-height: 1.6;
     padding: 1em;
@@ -16,10 +16,27 @@ body {
     grid-template-areas: 
             "img title"
             "img subtitle";
-    border: solid 2px black;
     justify-content: space-between;
     padding: 1em 30em;
+    background-color: #41436A;
+    margin: 15px;
+    border: solid 2px #FE9677;
     
+}
+h1, h2 {
+  font-family: 'Chakra Petch';
+}
+
+.navLink {
+  color: whitesmoke;
+  text-decoration: none;
+  width: 10em;
+  height: 5em;
+  font-size: 16px;
+  background-color: #0A81D1;
+  padding: 0.8em;
+  font-family: 'Chakra Petch';
+  
 }
 
 
@@ -27,22 +44,31 @@ img {
     display: block;
     max-width: 200px;
     grid-area: img;
-    border: solid 2px black;
     
 }
+
+#myPhoto {
+  border-radius: 50px;
+}
+
 .title {
   grid-area: title;
-  border: solid 2px black;
+
 }
 .subtitle{
   grid-area: subtitle;
-  border: solid 2px black;
+
 }
 
-
+.navbar-container{
+  background-color: #41436A;
+  margin: 15px;  
+  border: solid 2px #FE9677;
+  padding: 20px;
+}
 
 .about-container{
-  border: solid 2px black;
+  
   display: grid;
   padding: 1em;
   grid-template-columns: 1fr 1fr 1fr;
@@ -50,56 +76,83 @@ img {
   align-items: center;
   justify-content: center;
   grid-template-areas: 
-  "main main main"
+  ". main ."
   "description description description";
-
-  
-  
+  background-color: #41436A;
+  margin: 15px;  
+  border: solid 2px #FE9677;
 }
 
 .itemA {
   grid-area: main;
-  width: 80%;
+  
   
 }
 .itemC {
   grid-area: description;
   margin: auto;
-  width: 30%;
-  border: solid 2px black;
-  grid-column: 1 / 2
+  width: 20em;
+  grid-column: 1 / 2;
+  background-color: #F64668;
 }
 .itemD {
   grid-area: description;
   margin: auto;
-  width: 30%;
-  border: solid 2px black;
-  grid-column: 2 / 3
+  width: 20em;
+  grid-column: 2 / 3;
+  background-color: #F64668;
 }
 .itemE {
   grid-area: description;
   margin: auto;
-  width: 30%;
-  border: solid 2px black;
-  grid-column: 3 / 4
+  width: 20em;
+  grid-column: 3 / 4;
+  background-color: #F64668;
 }
 
 .works-container{
-  border: solid 2px black;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 1em;
+  gap: 30px;
+  margin: 15 0px;
+  padding: 15px;
+  background-color: #41436A;
+  margin: 15px;
+  border: solid 2px #FE9677;
+  
+}
+
+.my-work {
+  background-color: #F64668;
+  padding: 10px;
 }
 
 .contacts-container{
-  border: solid 2px black;
+  border: solid 2px #FE9677;
   padding: 1em;
+  background-color: #41436A;
+  margin: 15px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .contact-links{
-  border: solid 2px black;
   padding: 1em;
   margin-top: 1em;
+  background-color: #F64668;
+  
+  
+}
+.contact-logos{
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
 }
