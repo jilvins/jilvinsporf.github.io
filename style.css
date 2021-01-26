@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background: #0077b6;  
+    background:whitesmoke;  
     color: whitesmoke;
     margin: 0;
     font-family: 'Ubuntu';
@@ -8,25 +8,18 @@ body {
     line-height: 1.6;
 }
 
-
-.header-container {
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-areas: 
-            "img title"
-            "img subtitle"; 
-    width: min-content;   
-    grid-template-columns: min-content max-content;
-    padding: 10px;
-    padding-left: 50px;
-}
-
 h1, h2 {
   font-family: 'Chakra Petch';
 }
+img {
+  display: block;
+  max-width: 200px;
+  grid-area: img;
+  
+}
 
 .navLink {
-  color: whitesmoke;
+  color: darkblue;
   text-decoration: none;
   width: 10em;
   height: 5em;
@@ -35,95 +28,153 @@ h1, h2 {
   font-family: 'Chakra Petch';
   
 }
-
-
-img {
-    display: block;
-    max-width: 200px;
-    grid-area: img;
-    
-}
-
-#myPhoto {
-  border-radius: 50px;
-}
-
-.title {
-  grid-area: title;
-
-}
-.subtitle{
-  grid-area: subtitle;
-
+.navLink:hover {
+  color: royalblue;
+  background-color: darkgray;
 }
 
 .navbar-container{
-  background-color: #0077b6;
   padding: 20px;
 }
 
-.about-container{
+
+.header-container {
+    
+    height: 50vh;
+    padding: 10px;
+    padding-left: 50px;
+    background-size: 100vw 50vh;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    z-index: -1;
+	transform: skewY(-3.5deg);
+	background: 
+		linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+		url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80) no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+	background-size: cover;
+	border-bottom: .2em solid #fff;
+
+}
+.static-side {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 30px;
+  font-size: 46px;
   
+}
+.subtitle{
+  font-size: 36px;
+  animation: 15s slide-right;
+  text-align: left;
+
+}
+
+@keyframes slide-right {
+  0% {margin-left:0%;}
+  50% {margin-left:70%;}
+  100% {margin-left:0%;}
+}
+#myPhoto {
+  border-radius: 80px;
+  margin-right: 40px;
+}
+
+.dev-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+
+.about-container{
   display: grid;
-  background-color: #023e8a;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 1fr;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 20px;
+  justify-content: space-around;
+  column-gap: 60px;
   grid-template-areas: 
   ". . main . ."
   ". description description description .";
   padding: 1em;
- 
+  color: whitesmoke;
 }
 
 .itemA {
-  grid-area: main;
-  
-  
+  grid-area: main;  
 }
 .itemC {
   grid-area: description;
-  width: 400px;
   grid-column: 2;
-  background-color: #03045e;
-  border-radius: 25px;
- 
 }
 .itemD {
   grid-area: description;
-  width: 400px;
   grid-column: 3;
-  background-color: #03045e;
-  border-radius: 25px;
-
 }
 .itemE {
   grid-area: description;
-  width: 400px;
   grid-column: 4;
-  background-color: #03045e;
+}
+
+.skill-description {
+  width: 400px;
+  background-image: url("/images/skills-background.jpg"); 
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 25px;
 }
 
 .works-container{
   
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: auto auto auto;
   justify-content: center;
-  gap: 10px;
+  gap: 40px;
   padding: 15px;
-  background-color: #0077b6;
-
-  
+  color: whitesmoke;
 }
-
+  
 .my-work {
-  background-color: #03045e;
+  background-color: darkkhaki; 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 10px;
   border-radius: 25px;
+  display: inline-block;
+  overflow: hidden;
+}
+  
+
+
+
+
+.work-img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  border-radius: 25px;
+  padding-top: 1em;  
+}
+
+.fill-layer {
+  animation:fill 1s ease-in-out;  
+  bottom:0;
+  left:0;
+  position:absolute;
+  right:0;
+  top:0;
+  z-index:-1;
+}
+
+@keyframes fill {
+  0% {
+    border-radius:50%;
+    transform:translateY(150%) translateX(150%) scale(2);
+  }
+  100% {
+    border-radius:50%;
+    transform:scale(2);
+  }
 }
 
 .contacts-container{
